@@ -1,0 +1,27 @@
+/* FONTS PRELOAD MAIN */
+/* FONTS PRELOAD AFTERALL BLOCK */
+@font-face {
+  font-family: "Claredon";
+  src: url(../fonts/clarendon-regular/Clarendon-Regular.ttf); }
+body {
+  display: flex;
+  background-color: black;
+  color: white;
+  text-align: center; }
+
+.afterAll {
+  font-family: clarendon; }
+
+.text-after {
+  font-size: 5vw;
+  font-weight: 100; }
+  .text-after p {
+    margin: 0; }
+
+.main {
+  display: none; }
+
+.text-after:not(:first-child) {
+  display: none; }
+
+/*# sourceMappingURL=main.css.map */
