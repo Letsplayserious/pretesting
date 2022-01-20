@@ -4,7 +4,11 @@
   font-family: "Claredon";
   src: url(../fonts/clarendon-regular/Clarendon-Regular.ttf); }
 body {
+  height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
   background-color: black;
   color: white;
   text-align: center; }
@@ -19,9 +23,12 @@ body {
     margin: 0; }
 
 .main {
+  font-size: 2vw; }
+
+.removed, .text-after {
   display: none; }
 
-.text-after:not(:first-child) {
-  display: none; }
+.text-after__bottom {
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=main.css.map */
