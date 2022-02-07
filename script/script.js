@@ -1,15 +1,18 @@
 function runningCredits(){
     let credits = document.querySelectorAll(".text-after");
-    setTimeout(() => {
-        for (let i = 0; i < credits.length; i++) {
-            setTimeout(() => {
-                credits[i].style.display = "block";
-            }, 3000)
-            setTimeout(() => {
-                credits[i].style.display = "none";
-            }, 6000)
-        }
-    }, 3000);
+    for (let i = 0; i < credits.length; i++) {
+        setTimeout(() => {
+            credits[i].style.display = "block";
+            if(credits[i] !== credits[0]){
+                credits[i-1].style.display = "none";
+            }
+            if(credits[i] == credits[credits.length-1]){
+                setTimeout(() => {
+                    credits[i].style.display = "none";
+                }, 3000);
+            }
+        }, 3000*i)
+    }
 }
 
 // Event on space keydown
@@ -27,6 +30,6 @@ document.addEventListener("keydown", (event) => {
         let removed = document.querySelectorAll(".removed");
         removed[0].style.display = "flex";
 
-        setTimeout(runningCredits, 7000);
+        setTimeout(runningCredits, 4500);
     }
   })
