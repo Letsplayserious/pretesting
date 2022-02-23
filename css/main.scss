@@ -26,6 +26,7 @@ $clarendon: "Claredon";
 
 // STYLES
 
+// common styles
 body{
     height: 100vh;
     display: flex;
@@ -37,27 +38,23 @@ body{
     text-align: center;
 }
 
-// AFTERaLL SECTION
-
-.afterAll{
-    font-family: clarendon;
+p{
+    margin: 0;
 }
+
+// CREDITS SCENE
 
 .text-after{
     font-size: 5vw;
     font-weight: 100;
-
-    p{
-        margin: 0;
-    }
+    font-family: clarendon;
 }
 
-.main{
-    font-size: 2vw;
+.slider{
+    font-size: 3vw;
 }
 
-
-.removed, .text-after{
+.credits, .text-after{
     display: none;
 }
 

@@ -1,6 +1,6 @@
 function runningCredits(){
     // Change visibility of credits
-    let removed = document.querySelectorAll(".removed");
+    let removed = document.querySelectorAll(".credits");
     removed[0].style.display = "flex";
 
     let i = 0;
@@ -23,8 +23,8 @@ function runningCredits(){
 // Event on space keydown
 document.addEventListener("keydown", (event) => {
     if(event.code == "Space"){
-        // Delete main section
-        let removedKey = document.getElementById("main");
+        // Delete slider block
+        let removedKey = document.getElementById("slider");
         removedKey.parentNode.removeChild(removedKey);
 
         // Run music

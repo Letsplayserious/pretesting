@@ -13,19 +13,18 @@ body {
   color: white;
   text-align: center; }
 
-.afterAll {
-  font-family: clarendon; }
+p {
+  margin: 0; }
 
 .text-after {
   font-size: 5vw;
-  font-weight: 100; }
-  .text-after p {
-    margin: 0; }
+  font-weight: 100;
+  font-family: clarendon; }
 
-.main {
-  font-size: 2vw; }
+.slider {
+  font-size: 3vw; }
 
-.removed, .text-after {
+.credits, .text-after {
   display: none; }
 
 .text-after__bottom {
