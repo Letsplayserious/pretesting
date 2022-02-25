@@ -2,6 +2,23 @@
 // This function printing two strokes, and added dropdown F-block
 
 (function (){
+
+  //1 Beginning, print first stroke
+    function firstStrokePrinting(){
+      let text = document.getElementById("name");
+
+      let firstStroke = "first stroke will ended now";
+
+      for(let i = 0; i < firstStroke.length; i++){
+        setTimeout(()=>{
+          text.textContent += firstStroke[i];
+        }, i*100);
+      }
+
+      //2 Print second stroke, second arg depends on amount of symbols in text param.
+      setTimeout(secondStrokePrinting, 3000);
+    }
+
     //3 Printing second stroke
     function secondStrokePrinting(){
         let text = document.getElementById("vacancy");
@@ -46,18 +63,6 @@
           }
     }
 
-    //1 Beginning, print first stroke
-    let text = document.getElementById("name");
-
-    let firstStroke = "first stroke will ended now";
-
-    for(let i = 0; i < firstStroke.length; i++){
-      setTimeout(()=>{
-        text.textContent += firstStroke[i];
-      }, i*100);
-    }
-
-    //2 Print second stroke, second arg depends on amount of symbols in text param.
-    setTimeout(secondStrokePrinting, 3000);
+    setTimeout(firstStrokePrinting, 2000);
   }
 )();
