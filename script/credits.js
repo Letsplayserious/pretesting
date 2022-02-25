@@ -1,3 +1,5 @@
+// This file answers for credit scene
+
 function runningCredits(){
     // Change visibility of credits
     let removed = document.querySelectorAll(".credits");
