@@ -4,7 +4,10 @@
     function addLetters(line, words, interval){
       for(let i = 0; i < words.length; i++){
         setTimeout(()=>{
-          line.textContent+=words[i];
+          let span = document.createElement('span');
+          span.innerHTML = words[i];
+          // line.textContent+=words[i];
+          line.append(span);
         }, (interval + i*100));
       }
     }
