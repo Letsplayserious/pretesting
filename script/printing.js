@@ -29,6 +29,7 @@
 
     let name = document.getElementById("name");
     let vacancy = document.getElementById("vacancy");
+    let spaceButton = document.getElementById("space");
     let firstLine = "Ионов Святослав";
     let fakeLine = "Ведущий инженер ПТО";
     let secondLine = "Начинающий web-программист / Junior Frontend Developer";
@@ -37,5 +38,8 @@
     let second = addLetters(vacancy, fakeLine, 5500);
     setTimeout(secondLineErasing, 11000);
     let third = addLetters(vacancy, secondLine, 14000);
+    setTimeout(()=>{
+      spaceButton.style.visibility = "visible";
+    }, 20000);
   }
 )();
