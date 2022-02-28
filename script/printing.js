@@ -1,40 +1,15 @@
 // Made through IIFE, so as not to pollute the LE
-// This function printing two strokes, and added dropdown F-block
-
+// This function printing two lines, and added dropdown F-block
 (function (){
-
-  //1 Beginning, print first stroke
-    function firstStrokePrinting(){
-      let text = document.getElementById("name");
-
-      let firstStroke = "first stroke will ended now";
-
-      for(let i = 0; i < firstStroke.length; i++){
+    function addLetters(line, words, interval){
+      for(let i = 0; i < words.length; i++){
         setTimeout(()=>{
-          text.textContent += firstStroke[i];
-        }, i*100);
+          line.textContent+=words[i];
+        }, (interval + i*100));
       }
-
-      //2 Print second stroke, second arg depends on amount of symbols in text param.
-      setTimeout(secondStrokePrinting, 3000);
     }
 
-    //3 Printing second stroke
-    function secondStrokePrinting(){
-        let text = document.getElementById("vacancy");
-        let secondStrokeBefore = "bla";
-
-        for(let i = 0; i < secondStrokeBefore.length; i++){
-          setTimeout(()=>{
-            text.textContent += secondStrokeBefore[i];
-          }, i*100);
-        }
-
-        setTimeout(secondStrokeErasing, 1000);
-      }
-
-    //4 Erasing stroke
-    function secondStrokeErasing(){
+    function secondLineErasing(){
         let elem = document.getElementById("vacancy");
         let text = elem.textContent;
 
@@ -47,22 +22,17 @@
               }
           },k*100);
         }
-
-        setTimeout(againSecondStroke, 2000);
     }
 
-    // 5 Printing again second stroke
-    function againSecondStroke(){
-        let text = document.getElementById("vacancy");
-        let secondStrokeAfter = "qweqweqwewqqeqQAWRFEKDBLDSgqqaksffsjSEuifhjaHEUIGF";
+    let name = document.getElementById("name");
+    let vacancy = document.getElementById("vacancy");
+    let firstLine = "Ионов Святослав";
+    let fakeLine = "Ведущий инженер ПТО";
+    let secondLine = "Начинающий web-программист / Junior Frontend Developer";
 
-        for(let i = 0; i < secondStrokeAfter.length; i++){
-            setTimeout(()=>{
-              text.textContent += secondStrokeAfter[i];
-            }, i*100);
-          }
-    }
-
-    setTimeout(firstStrokePrinting, 2000);
+    let first = addLetters(name, firstLine, 2000);
+    let second = addLetters(vacancy, fakeLine, 5500);
+    setTimeout(secondLineErasing, 11000);
+    let third = addLetters(vacancy, secondLine, 14000);
   }
 )();
