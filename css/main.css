@@ -16,6 +16,29 @@ body {
 p {
   margin: 0; }
 
+.space {
+  visibility: hidden;
+  -webkit-animation: blink 3s linear infinite;
+  animation: blink 3s linear infinite; }
+
+@-webkit-keyframes blink {
+  0% {
+    color: black; }
+  35% {
+    color: white; }
+  65% {
+    color: white; }
+  100% {
+    color: black; } }
+@keyframes blink-animation {
+  0% {
+    color: black; }
+  35% {
+    color: white; }
+  65% {
+    color: white; }
+  100% {
+    color: black; } }
 .text-after {
   font-size: 5vw;
   font-weight: 100;

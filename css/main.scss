@@ -42,6 +42,26 @@ p{
     margin: 0;
 }
 
+.space{
+    visibility: hidden;
+    -webkit-animation: blink 3s linear infinite;
+    animation: blink 3s linear infinite;
+}
+
+@-webkit-keyframes blink {
+    0% { color: rgb(0, 0, 0); }
+    35% { color: rgb(255, 255, 255); }
+    65% { color: rgb(255, 255, 255); }
+    100% { color: rgb(0, 0, 0); }
+  }
+
+  @keyframes blink-animation {
+    0% { color: rgb(0, 0, 0); }
+    35% { color: rgb(255, 255, 255); }
+    65% { color: rgb(255, 255, 255); }
+    100% { color: rgb(0, 0, 0); }
+  }
+
 // CREDITS SCENE
 
 .text-after{
