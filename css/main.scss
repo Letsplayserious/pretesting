@@ -15,8 +15,6 @@ $purple:#800080;
 
 /* FONTS PRELOAD MAIN */
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Balsamiq+Sans&family=Bellota:wght@300&family=Bona+Nova&family=Caveat&family=Hachi+Maru+Pop&family=Kaisei+Decol&family=Neucha&family=Reggae+One&family=Roboto:wght@100&display=swap');
-
-/* FONTS PRELOAD AFTERALL BLOCK */
 @font-face {
    font-family: "Claredon";
    src: url(../fonts/clarendon-regular/Clarendon-Regular.ttf);
@@ -43,6 +41,24 @@ p{
     margin: 0;
 }
 
+// GRADIENT HOVER ANIMATION
+p:hover:not(.space){
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+//
+.hidden-text{
+    visibility: hidden;
+}
+
+// SPACE ANIMATION
+
 .space{
     visibility: hidden;
     -webkit-animation: blink 3s linear infinite;
@@ -56,12 +72,14 @@ p{
     100% { color: rgb(0, 0, 0); }
   }
 
-  @keyframes blink-animation {
+@keyframes blink-animation {
     0% { color: rgb(0, 0, 0); }
     35% { color: rgb(255, 255, 255); }
     65% { color: rgb(255, 255, 255); }
     100% { color: rgb(0, 0, 0); }
   }
+
+// https://fossheim.io/writing/posts/css-text-gradient/
 
 // CREDITS SCENE
 
