@@ -17,6 +17,16 @@
             }
     };
 
+    // CHANGE LETTER FONT
     setTimeout(changeLetters, 20000);
+
+    // TOGGLING TEXT BY CLICKING
+    let container = document.getElementsByTagName("body");
+    let name = document.getElementById("name");
+    let vacancy = document.getElementById("vacancy");
+    container[0].onclick = function(){
+        name.classList.toggle("hidden-text");
+        vacancy.classList.toggle("hidden-text");
+    }
 
 })();
