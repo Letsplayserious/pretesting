@@ -4,10 +4,6 @@
   font-family: "Claredon";
   src: url(../fonts/clarendon-regular/Clarendon-Regular.ttf); }
 body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0;
   background-color: black;
   color: white;
@@ -51,13 +47,22 @@ p {
     color: white; }
   100% {
     color: black; } }
+.slider {
+  height: 100vh;
+  width: 100vw;
+  position: relative; }
+
+.slide {
+  position: absolute;
+  width: 33.3%; }
+
 .text-after {
   font-size: 5vw;
   font-weight: 100;
   font-family: clarendon; }
 
 .slider {
-  font-size: 3vw; }
+  font-size: 2vw; }
 
 .credits, .text-after {
   display: none; }

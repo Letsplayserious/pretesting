@@ -12,10 +12,6 @@ $clarendon: "Claredon";
 
 // common styles
 body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0;
     background-color: black;
     color: white;
@@ -64,6 +60,19 @@ p{
     100% { color: rgb(0, 0, 0); }
   }
 
+// SLIDER
+.slider{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.slide{
+    position: absolute;
+    width: 33.3%;
+    height: 100vh;
+}
+
 // CREDITS SCENE
 
 .text-after{
@@ -73,7 +82,7 @@ p{
 }
 
 .slider{
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 .credits, .text-after{
