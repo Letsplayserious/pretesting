@@ -50,11 +50,26 @@ p {
 .slider {
   height: 100vh;
   width: 100vw;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .slide {
   position: absolute;
-  width: 33.3%; }
+  width: 33.3%;
+  transition: all 0.5s; }
+
+.action-prev {
+  left: 20px;
+  top: 50%; }
+
+.action-next {
+  right: 20px;
+  top: 50%; }
+
+.slider-navigation {
+  position: absolute;
+  text-decoration: none;
+  color: white; }
 
 .text-after {
   font-size: 5vw;
