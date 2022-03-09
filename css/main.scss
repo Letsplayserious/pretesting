@@ -4,7 +4,10 @@
    font-family: "Claredon";
    src: url(../fonts/clarendon-regular/Clarendon-Regular.ttf);
 }
-
+@font-face {
+    font-family: "assassin-st";
+    src: url(../fonts/assassin.woff2) format("woff2");
+}
 // VARIABLES FONTS
 $clarendon: "Claredon";
 

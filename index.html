@@ -6,57 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pretesting task</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/effects.css">
     <link rel="stylesheet" href="css/normolize.css">
 </head>
 <body>
-    <div class="slider" id="slider">
-        <div class="left"></div>
-        <div class="center">
-            <p class="name" id="name"></p>
-            <p class="vacancy" id="vacancy"></p>
-            <p class="space" id="space">PRESS SPACE</p>
+    <div class="container">
+        <div class="slider__wrapper">
+            <div class="slider" id="slider">
+                <div class="left"></div>
+                <div class="center">
+                    <p class="name" id="name"></p>
+                    <p class="vacancy" id="vacancy"></p>
+                    <p class="space" id="space">PRESS SPACE</p>
+                </div>
+                <div class="right"></div>
+            </div>
         </div>
-        <div class="right"></div>
+        <div class="credits__wrapper">
+            <div class="credits">
+                <div class="text-after">
+                    <p class="text-after__top">Directed by</p>
+                    <p class="text-after__bottom">Robert B. Weide</p>
+                </div>
+                <div class="text-after">
+                    <p class="text-after__top">Executive Producer</p>
+                    <p class="text-after__bottom">Larry David</p>
+                </div>
+                <div class="text-after">
+                    <p class="text-after__top">Executive Producer</p>
+                    <p class="text-after__bottom">Jeff Carlin</p>
+                </div>
+                <div class="text-after">
+                    <p class="text-after__top">Executive Producer</p>
+                    <p class="text-after__bottom">Gavin Polone</p>
+                </div>
+                <div class="text-after">
+                    <p class="text-after__top">Co-Executive Producer</p>
+                    <p class="text-after__bottom">Robert B. Weide</p>
+                </div>
+                <div class="text-after">
+                    <p class="text-after__top">Produced by</p>
+                    <p class="text-after__bottom">Tim Gibbons</p>
+                </div>
+                <div class="text-after">
+                    <p class="text-after__top">Co-Producer</p>
+                    <p class="text-after__bottom">Erin O'Malley</p>
+                </div>
+                <div class="text-after">
+                    <p class="text-after__top">Consulting Producer</p>
+                    <p class="text-after__bottom">Alan Zweibel</p>
+                </div>
+                <audio id="audio">22
+                    <source src="audio/y2mate.com - Directed by Robert B Weide theme meme_192kbps.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
     </div>
-    <div class="credits">
-        <div class="text-after">
-            <p class="text-after__top">Directed by</p>
-            <p class="text-after__bottom">Robert B. Weide</p>
-        </div>
-        <div class="text-after">
-            <p class="text-after__top">Executive Producer</p>
-            <p class="text-after__bottom">Larry David</p>
-        </div>
-        <div class="text-after">
-            <p class="text-after__top">Executive Producer</p>
-            <p class="text-after__bottom">Jeff Carlin</p>
-        </div>
-        <div class="text-after">
-            <p class="text-after__top">Executive Producer</p>
-            <p class="text-after__bottom">Gavin Polone</p>
-        </div>
-        <div class="text-after">
-            <p class="text-after__top">Co-Executive Producer</p>
-            <p class="text-after__bottom">Robert B. Weide</p>
-        </div>
-        <div class="text-after">
-            <p class="text-after__top">Produced by</p>
-            <p class="text-after__bottom">Tim Gibbons</p>
-        </div>
-        <div class="text-after">
-            <p class="text-after__top">Co-Producer</p>
-            <p class="text-after__bottom">Erin O'Malley</p>
-        </div>
-        <div class="text-after">
-            <p class="text-after__top">Consulting Producer</p>
-            <p class="text-after__bottom">Alan Zweibel</p>
-        </div>
-        <audio id="audio">
-            <source src="audio/y2mate.com - Directed by Robert B Weide theme meme_192kbps.mp3" type="audio/mp3">
-        </audio>
-    </div>
+
     <script src="script/printing.js"></script>
     <script src="script/credits.js"></script>
     <script src="script/mouseOver.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
