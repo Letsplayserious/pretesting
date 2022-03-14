@@ -30,7 +30,7 @@ p{
 }
 
 // GRADIENT HOVER ANIMATION
-.center p:hover:not(.space){
+.gradient:hover{
     background-color: #f3ec78;
     background-image: linear-gradient(45deg, #9400D3, #00CED1);
     background-size: 100%;
@@ -75,7 +75,8 @@ p{
     font-family: clarendon;
 }
 
-.slider{
+.showcase__content-window{
+    max-width: 50vw;
     font-size: 3vw;
 }
 

@@ -26,7 +26,7 @@ function runningCredits(){
 document.addEventListener("keydown", (event) => {
     if(event.code == "Space"){
         // Delete slider block
-        let removedKey = document.getElementById("slider");
+        let removedKey = document.getElementById("showcase__content");
         removedKey.parentNode.removeChild(removedKey);
 
         // Run music

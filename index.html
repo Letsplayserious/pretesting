@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Future programmer's pet-project">
     <title>Pretesting task</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/effects.css">
     <link rel="stylesheet" href="css/normolize.css">
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="slider__wrapper">
-            <div class="slider" id="slider">
-                <div class="left"></div>
-                <div class="center">
-                    <p class="name" id="name"></p>
-                    <p class="vacancy" id="vacancy"></p>
-                    <p class="space" id="space">PRESS SPACE</p>
+        <section class="showcase">
+            <div class="showcase__content-wrapper">
+                <div class="showcase__content" id="showcase__content">
+                    <video class="showcase__video" src="videos/smoke-background-optimized.mp4" autoplay loop muted></video>
+                    <!-- <div class="showcase__content-window left"></div> -->
+                    <!-- <div class="showcase__content-window center"> -->
+                        <!-- <p class="name" id="name"></p> -->
+                        <!-- <p class="vacancy" id="vacancy"></p> -->
+                        <!-- <p class="space" id="space">PRESS SPACE</p> -->
+                    <!-- </div> -->
+                    <!-- <div class="showcase__content-window right"></div> -->
                 </div>
-                <div class="right"></div>
             </div>
-        </div>
+        </section>
+
         <div class="credits__wrapper">
             <div class="credits">
                 <div class="text-after">
@@ -61,11 +66,11 @@
                 </audio>
             </div>
         </div>
-    </div>
 
     <script src="script/printing.js"></script>
     <script src="script/credits.js"></script>
     <script src="script/mouseOver.js"></script>
+    <script src="script/effects.js"></script>
     <script src="libs/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
