@@ -14,6 +14,7 @@ $clarendon: "Claredon";
 // STYLES
 
 // common styles
+
 body{
     height: 100vh;
     display: flex;
@@ -75,10 +76,7 @@ p{
     font-family: clarendon;
 }
 
-.showcase__content-window{
-    max-width: 50vw;
-    font-size: 3vw;
-}
+
 
 .credits, .text-after{
     display: none;

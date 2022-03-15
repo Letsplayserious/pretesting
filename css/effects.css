@@ -2,7 +2,7 @@
   --accent: #CC8869; }
 
 @font-face {
-  font-family: assasin-st;
+  font-family: assassin-st;
   src: url(fonts/assasin.woff2); }
 .showcase {
   height: 100%;
@@ -40,6 +40,35 @@
   object-fit: cover;
   opacity: .45; }
 
+.showcase__content-wrapper {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 15vh 0; }
+
+.showcase__content-wrapper::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-image: url(../images/glow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: k-glow 1.8s ease-in-out infinite; }
+
+.showcase__header {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 40px;
+  font-family: assassin-st, sans-serif;
+  font-size: 36px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75); }
+
 @keyframes k-light {
   0% {
     opacity: .2; }
@@ -47,5 +76,12 @@
     opacity: .3; }
   100% {
     opacity: .2; } }
+@keyframes k-glow {
+  0% {
+    opacity: .6; }
+  50% {
+    opacity: .8; }
+  100% {
+    opacity: .6; } }
 
 /*# sourceMappingURL=effects.css.map */
