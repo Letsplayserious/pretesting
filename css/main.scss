@@ -30,6 +30,31 @@ p{
     margin: 0;
 }
 
+
+// SWIPER SLIDE STYLES
+.swiper-wrapper{
+    padding-top: 15%;
+}
+
+.swiper-slide{
+    width: 30%;
+}
+
+.showcase-carousel__item.swiper-slide-active{
+    opacity: 1;
+}
+
+.showcase-carousel__item.swiper-slide{
+    opacity: .5;
+}
+
+.center{
+    font-size: 24px;
+    font-family: clarendon;
+    opacity: .8;
+}
+
+
 // GRADIENT HOVER ANIMATION
 .gradient:hover{
     background-color: #f3ec78;
@@ -50,22 +75,24 @@ p{
 
 .space{
     visibility: hidden;
-    -webkit-animation: blink 3s linear infinite;
-    animation: blink 3s linear infinite;
+    -webkit-animation: blink 5s linear infinite;
+    animation: blink 5s linear infinite;
 }
 
-@-webkit-keyframes blink {
-    0% { color: rgb(0, 0, 0); }
-    35% { color: rgb(255, 255, 255); }
-    65% { color: rgb(255, 255, 255); }
-    100% { color: rgb(0, 0, 0); }
+  @-webkit-keyframes blink {
+    0% { opacity: 0; }
+    35% { opacity: .5; }
+    50% { opacity: 1; }
+    85% { opacity: .5; }
+    100% { opacity: 0; }
   }
 
 @keyframes blink-animation {
-    0% { color: rgb(0, 0, 0); }
-    35% { color: rgb(255, 255, 255); }
-    65% { color: rgb(255, 255, 255); }
-    100% { color: rgb(0, 0, 0); }
+    0% { opacity: 0; }
+    35% { opacity: .5; }
+    50% { opacity: 1; }
+    85% { opacity: .5; }
+    100% { opacity: 0; }
   }
 
 // CREDITS SCENE
@@ -75,8 +102,6 @@ p{
     font-weight: 100;
     font-family: clarendon;
 }
-
-
 
 .credits, .text-after{
     display: none;
