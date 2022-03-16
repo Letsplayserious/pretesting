@@ -38,20 +38,31 @@ p{
 
 .swiper-slide{
     width: 30%;
+    transition: opacity 1.8s ease-in-out, transform 1.8s cubic-bezier(.4, 0, 0, 1);
 }
 
-.showcase-carousel__item.swiper-slide-active{
+.swiper-slide::after{
+    position: absolute;
+    content: "";
+    width: 150px;
+    box-shadow: 0 0 45px 10px white;
+    bottom: -5px;
+    left: calc(50% - 75px);
+}
+
+.swiper-slide.showcase-carousel__item.swiper-slide-active{
     opacity: 1;
+    transform: scale(1.2);
 }
 
 .showcase-carousel__item.swiper-slide{
-    opacity: .5;
+    opacity: .4;
+    transform: scale(.75);
 }
 
 .center{
     font-size: 24px;
     font-family: clarendon;
-    opacity: .8;
 }
 
 
