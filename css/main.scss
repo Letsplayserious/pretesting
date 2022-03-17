@@ -31,80 +31,80 @@ p{
 }
 
 
-// SWIPER SLIDE STYLES
-.swiper-wrapper{
-    padding-top: 15%;
-}
 
-.swiper-slide{
-    width: 30%;
-    transition: opacity 1.8s ease-in-out, transform 1.8s cubic-bezier(.4, 0, 0, 1);
-}
-
-.swiper-slide::after{
-    position: absolute;
-    content: "";
-    width: 150px;
-    box-shadow: 0 0 45px 10px white;
-    bottom: -5px;
-    left: calc(50% - 75px);
-}
-
-.swiper-slide.showcase-carousel__item.swiper-slide-active{
-    opacity: 1;
-    transform: scale(1.2);
-}
-
-.showcase-carousel__item.swiper-slide{
-    opacity: .4;
-    transform: scale(.75);
-}
+// .showcase-carousel__item{
+//     width: 30vw;
+//     height: 50vh;
+// }
 
 .center{
     font-size: 24px;
     font-family: clarendon;
+    text-align: center;
+}
+
+.left{
+    display: grid;
+    padding-top: 0.3em;
+    background-color: rgba(177, 177, 177, .2);
+    box-shadow: 0 0 10px 10px rgba(177, 177, 177, .2);
+    border: 2px rgba(177, 177, 177, .2);
+    font-family: assassin-st, sans-serif;
+    overflow: hidden;
+}
+
+figure{
+    margin-bottom: 0;
+}
+.project-card{
+    min-width: 40%;
+    font-size: 18px;
 }
 
 
-// GRADIENT HOVER ANIMATION
-.gradient:hover{
-    background-color: #f3ec78;
-    background-image: linear-gradient(45deg, #9400D3, #00CED1);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+.project-card__image:hover{
+    cursor: default;
 }
 
-// TOGGILING STYLE FOR ONCLICK EVENT ON TEXT
-.hidden-text{
-    display: none;
+.project-card__description{
+    margin-top:.5em;
+}
+.description{
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: .4em;
+}
+// MEDIA LEFT
+
+@media(min-width:1024px){
+    .left{
+        grid-template-areas:
+        "one two"
+        "three four"
+        "five six"
+        "description description"
+    }
+    .one{
+        grid-area: one;
+    }
+    .two{
+        grid-area: two;
+    }
+    .three{
+        grid-area: three;
+    }
+    .four{
+        grid-area: four;
+    }
+    .description{
+        grid-area: description;
+    }
+    .project-card__image{
+        max-width: 100%;
+    }
 }
 
-// SPACE ANIMATION
 
-.space{
-    visibility: hidden;
-    -webkit-animation: blink 5s linear infinite;
-    animation: blink 5s linear infinite;
-}
-
-  @-webkit-keyframes blink {
-    0% { opacity: 0; }
-    35% { opacity: .5; }
-    50% { opacity: 1; }
-    85% { opacity: .5; }
-    100% { opacity: 0; }
-  }
-
-@keyframes blink-animation {
-    0% { opacity: 0; }
-    35% { opacity: .5; }
-    50% { opacity: 1; }
-    85% { opacity: .5; }
-    100% { opacity: 0; }
-  }
 
 // CREDITS SCENE
 

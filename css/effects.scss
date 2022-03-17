@@ -10,7 +10,6 @@
 .showcase{
     height: 100%;
     width: 100%;
-    // background-color: #fff;
     position: relative;
     overflow: hidden;
     &::before{
@@ -73,7 +72,6 @@
     position: absolute;
     z-index: 1;
     width: 100%;
-    top: 40px;
     font-family: assassin-st, sans-serif;
     font-size: 36px;
     text-align: center;
@@ -104,4 +102,74 @@
     100%{
         opacity: .6;
     }
+}
+
+// TOGGILING STYLE FOR ONCLICK EVENT ON TEXT
+// .hidden-text{
+//     display: none;
+// }
+
+// SPACE BLINK ANIMATION
+
+.space{
+    visibility: hidden;
+    -webkit-animation: blink 5s linear infinite;
+    animation: blink 5s linear infinite;
+}
+
+  @-webkit-keyframes blink {
+    0% { opacity: 0; }
+    35% { opacity: .5; }
+    50% { opacity: 1; }
+    85% { opacity: .5; }
+    100% { opacity: 0; }
+  }
+
+@keyframes blink-animation {
+    0% { opacity: 0; }
+    35% { opacity: .5; }
+    50% { opacity: 1; }
+    85% { opacity: .5; }
+    100% { opacity: 0; }
+  }
+
+  // GRADIENT HOVER ANIMATION
+.gradient:hover{
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, #9400D3, #00CED1);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+
+
+// SWIPER SLIDE STYLES
+.swiper-wrapper{
+    // padding-top: 15%;
+}
+
+.swiper-slide{
+    transition: opacity 1.8s ease-in-out, transform 1.8s cubic-bezier(.4, 0, 0, 1);
+}
+
+.center::after{
+    position: absolute;
+    content: "";
+    width: 150px;
+    box-shadow: 0 0 45px 10px white;
+    bottom: -5px;
+    left: calc(50% - 75px);
+}
+
+.swiper-slide.showcase-carousel__item.swiper-slide-active{
+    opacity: .9;
+    transform: scale(.9);
+}
+
+.showcase-carousel__item.swiper-slide{
+    opacity: .4;
+    transform: scale(.75);
 }
