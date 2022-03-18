@@ -1,3 +1,6 @@
+// Made through IIFE, so as not to pollute the LE
+// Changing letters
+
 (function (){
     function randomInteger(min, max) {
         let rand = min + Math.random() * (max + 1 - min);
@@ -24,9 +27,5 @@
     let container = document.getElementsByTagName("body");
     let name = document.getElementById("name");
     let vacancy = document.getElementById("vacancy");
-    container[0].onclick = function(){
-        name.classList.toggle("hidden-text");
-        vacancy.classList.toggle("hidden-text");
-    }
 
 })();

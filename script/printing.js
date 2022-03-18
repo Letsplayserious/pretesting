@@ -1,5 +1,5 @@
 // Made through IIFE, so as not to pollute the LE
-// This function printing two lines, and added dropdown F-block
+// This function printing two lines, and added space block
 (function (){
     function addLetters(line, words, interval){
       for(let i = 0; i < words.length; i++){

@@ -32,18 +32,18 @@ p{
     margin: 0;
 }
 
-// Align container from 1080 and higher
+// ALIGN CONTAINER FROM 1080 AND HIGHER
 .swiper-wrapper{
     align-items: center;
 }
 
-// Negative margin needed to justify items in the center
+// NEGATIVE MARGIN NEEDED TO JUSTIFY ITEMS IN THE CENTER
 .swiper-slide{
     max-height: 800px;
     margin-left: -30px;
 }
 
-// Styles for center container
+// STYLES FOR CENTRAL CONTAINER
 
 .center{
     font-size: 24px;
@@ -51,7 +51,7 @@ p{
     text-align: center;
 }
 
-// Little shadow on the space button
+// LITTLE SHADOW ON THE SPACE BUTTON
 .center::after{
     position: absolute;
     content: "";
@@ -61,7 +61,7 @@ p{
     left: calc(50% - 75px);
 }
 
-// Styles for left container
+// LEFT CONTAINER
 .left{
     display: grid;
     grid-template-areas:
@@ -121,10 +121,6 @@ p{
     font-size: 18px;
     margin-bottom:20px;
 }
-
-
-
-
 
 .right{
     padding: 30px 30px 15px;
