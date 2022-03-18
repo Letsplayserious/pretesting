@@ -1,7 +1,11 @@
+// Preloaded font
+
 @font-face {
     font-family: assassin-st;
     src: url(fonts/assasin.woff2);
 }
+
+// Styles for visible viewport
 
 .showcase{
     height: 100%;
@@ -18,6 +22,8 @@
         z-index: 1;
         box-shadow: inset 0 0 500px #000;
     }
+
+    // Adding light from top
     &::after{
         content:"";
         position: absolute;
@@ -33,6 +39,7 @@
     }
 }
 
+// VIDEO COVER STYLES
 .showcase__video{
     position: absolute;
     top: 0;
@@ -43,6 +50,7 @@
     opacity: .45;
 }
 
+// DROPDOWN MAIN SECTION
 .showcase__content-wrapper{
     position: relative;
     z-index: 2;
@@ -50,6 +58,26 @@
     padding: 15vh 0;
 }
 
+// CENTER SPACE BLINK ANIMATION
+.space{
+    margin-top: 16px;
+    visibility: hidden;
+    -webkit-animation: blink 5s linear infinite;
+    animation: blink 5s linear infinite;
+}
+
+// CENTER GRADIENT HOVER ANIMATION
+.gradient:hover{
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, #9400D3, #00CED1);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+// ANIMATION OF SMOKE
 .showcase__content-wrapper::before{
     position: absolute;
     top: 0;
@@ -74,7 +102,25 @@
     color: rgba(255, 255, 255, .75);
 }
 
-// ANIMATION
+// SlIDE ANIMATION
+.swiper-slide{
+    transition: opacity 1.8s ease-in-out, transform 1.8s cubic-bezier(.4, 0, 0, 1);
+}
+
+
+// RESIZING CENTRAL SLIDE
+.swiper-slide.showcase-carousel__item.swiper-slide-active{
+    opacity: .9;
+    transform: scale(.9);
+}
+
+// RESIZING LATERAL SLIDES
+.showcase-carousel__item.swiper-slide{
+    opacity: .4;
+    transform: scale(.75);
+}
+
+// ANIMATION STYLES
 
 @keyframes k-light{
     0%{
@@ -100,20 +146,7 @@
     }
 }
 
-// TOGGILING STYLE FOR ONCLICK EVENT ON TEXT
-// .hidden-text{
-//     display: none;
-// }
-
-// SPACE BLINK ANIMATION
-
-.space{
-    visibility: hidden;
-    -webkit-animation: blink 5s linear infinite;
-    animation: blink 5s linear infinite;
-}
-
-  @-webkit-keyframes blink {
+@-webkit-keyframes blink {
     0% { opacity: 0; }
     35% { opacity: .5; }
     50% { opacity: 1; }
@@ -128,38 +161,3 @@
     85% { opacity: .5; }
     100% { opacity: 0; }
   }
-
-  // GRADIENT HOVER ANIMATION
-.gradient:hover{
-    background-color: #f3ec78;
-    background-image: linear-gradient(45deg, #9400D3, #00CED1);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-}
-
-.swiper-slide{
-    margin-left: -1vw;
-    transition: opacity 1.8s ease-in-out, transform 1.8s cubic-bezier(.4, 0, 0, 1);
-}
-
-.center::after{
-    position: absolute;
-    content: "";
-    width: 150px;
-    box-shadow: 0 0 90px 5px white;
-    bottom: -5px;
-    left: calc(50% - 75px);
-}
-
-.swiper-slide.showcase-carousel__item.swiper-slide-active{
-    opacity: .9;
-    transform: scale(.9);
-}
-
-.showcase-carousel__item.swiper-slide{
-    opacity: .4;
-    transform: scale(.75);
-}

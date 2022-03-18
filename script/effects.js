@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // SLIDER
     let showSlider = new Swiper('.showcase-carousel', {
         loop:true,
         slidesPerView: 3,
@@ -6,8 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
         centeredSlides: true
     });
 
-
+    //VIDEO SPEED
     document.querySelector('video').playbackRate = 2;
 });
-
-// new Swiper('.swiper-container');

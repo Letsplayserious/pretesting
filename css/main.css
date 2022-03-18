@@ -19,21 +19,53 @@ body {
 p {
   margin: 0; }
 
+.swiper-wrapper {
+  align-items: center; }
+
+.swiper-slide {
+  max-height: 800px;
+  margin-left: -30px; }
+
 .center {
   font-size: 24px;
   font-family: clarendon;
   text-align: center; }
 
+.center::after {
+  position: absolute;
+  content: "";
+  width: 150px;
+  box-shadow: 0 0 90px 5px white;
+  bottom: -5px;
+  left: calc(50% - 75px); }
+
 .left {
   display: grid;
+  grid-template-areas: "one two" "three four" "five six" "description description";
   grid-column-gap: 35px;
   padding: 30px 30px 15px;
-  background-color: rgba(230, 230, 230, 0.05);
-  box-shadow: 0 0 30px 10px rgba(230, 230, 230, 0.05);
-  border: 2px rgba(230, 230, 230, 0.05);
+  background-color: rgba(230, 230, 230, 0.1);
+  box-shadow: 0 0 30px 10px rgba(230, 230, 230, 0.1);
+  border: 2px rgba(230, 230, 230, 0.1);
   border-radius: 1em;
   font-family: assassin-st, sans-serif;
   overflow: hidden; }
+  .left .one {
+    grid-area: one; }
+  .left .two {
+    grid-area: two; }
+  .left .three {
+    grid-area: three; }
+  .left .four {
+    grid-area: four; }
+  .left .description {
+    grid-area: description; }
+  .left .project-card__image {
+    max-width: 100%;
+    border-radius: .5em; }
+  .left .description {
+    margin-top: -10px;
+    font-size: 24px; }
 
 .project-card {
   width: 80%;
@@ -48,41 +80,18 @@ p {
   font-size: 18px;
   margin-bottom: 20px; }
 
-.description {
-  margin-top: -10px;
-  font-size: 24px; }
-
-.left {
-  grid-template-areas: "one two" "three four" "five six" "description description"; }
-
-.one {
-  grid-area: one; }
-
-.two {
-  grid-area: two; }
-
-.three {
-  grid-area: three; }
-
-.four {
-  grid-area: four; }
-
-.description {
-  grid-area: description; }
-
-.project-card__image {
-  max-width: 100%;
-  border-radius: .5em; }
-
 .right {
   padding: 30px 30px 15px;
-  background-color: rgba(230, 230, 230, 0.05);
-  box-shadow: 0 0 30px 10px rgba(230, 230, 230, 0.05);
-  border: 2px rgba(230, 230, 230, 0.05);
+  background-color: rgba(230, 230, 230, 0.1);
+  box-shadow: 0 0 30px 10px rgba(230, 230, 230, 0.1);
+  border: 2px rgba(230, 230, 230, 0.1);
   border-radius: 1em;
   overflow: hidden;
   font-family: assassin-st, sans-serif;
   font-size: 18px; }
+  .right .description {
+    margin-top: 10px;
+    font-size: 24px; }
 
 .text-after {
   font-size: 5vw;

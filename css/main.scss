@@ -10,7 +10,7 @@
 }
 
 // VARIABLE COLORS
-$transperent-grey: rgba(230, 230, 230, 0.05);
+$transperent-grey: rgba(230, 230, 230, 0.1);
 
 // VARIABLES FONTS
 $clarendon: "Claredon";
@@ -32,14 +32,43 @@ p{
     margin: 0;
 }
 
+// Align container from 1080 and higher
+.swiper-wrapper{
+    align-items: center;
+}
+
+// Negative margin needed to justify items in the center
+.swiper-slide{
+    max-height: 800px;
+    margin-left: -30px;
+}
+
+// Styles for center container
+
 .center{
     font-size: 24px;
     font-family: clarendon;
     text-align: center;
 }
 
+// Little shadow on the space button
+.center::after{
+    position: absolute;
+    content: "";
+    width: 150px;
+    box-shadow: 0 0 90px 5px white;
+    bottom: -5px;
+    left: calc(50% - 75px);
+}
+
+// Styles for left container
 .left{
     display: grid;
+    grid-template-areas:
+    "one two"
+    "three four"
+    "five six"
+    "description description";
     grid-column-gap: 35px;
     padding: 30px 30px 15px;
     background-color: $transperent-grey;
@@ -48,38 +77,8 @@ p{
     border-radius: 1em;
     font-family: assassin-st, sans-serif;
     overflow: hidden;
-}
 
-.project-card{
-    width: 80%;
-    margin: 0;
-    font-size: 18px;
-    justify-self: center;
-}
-
-.project-card__image:hover{
-    cursor: default;
-}
-
-.project-card__description{
-    font-size: 18px;
-    margin-bottom:20px;
-}
-
-.description{
-    margin-top: -10px;
-    font-size: 24px;
-}
-// MEDIA LEFT
-
-
-    .left{
-        grid-template-areas:
-        "one two"
-        "three four"
-        "five six"
-        "description description"
-    }
+    // GRID ASCII
     .one{
         grid-area: one;
     }
@@ -100,16 +99,47 @@ p{
         border-radius:.5em;
     }
 
-    .right{
-        padding: 30px 30px 15px;
-        background-color: $transperent-grey;
-        box-shadow: 0 0 30px 10px $transperent-grey;
-        border: 2px $transperent-grey;
-        border-radius: 1em;
-        overflow: hidden;
-        font-family: assassin-st, sans-serif;
-        font-size: 18px;
+    .description{
+        margin-top: -10px;
+        font-size: 24px;
     }
+}
+
+// PROJECT CARD STYLES
+.project-card{
+    width: 80%;
+    margin: 0;
+    font-size: 18px;
+    justify-self: center;
+}
+
+.project-card__image:hover{
+    cursor: default;
+}
+
+.project-card__description{
+    font-size: 18px;
+    margin-bottom:20px;
+}
+
+
+
+
+
+.right{
+    padding: 30px 30px 15px;
+    background-color: $transperent-grey;
+    box-shadow: 0 0 30px 10px $transperent-grey;
+    border: 2px $transperent-grey;
+    border-radius: 1em;
+    overflow: hidden;
+    font-family: assassin-st, sans-serif;
+    font-size: 18px;
+    .description{
+        margin-top: 10px;
+        font-size: 24px;
+    }
+}
 
 
 // CREDITS SCENE
