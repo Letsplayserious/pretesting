@@ -6,23 +6,18 @@
         setTimeout(()=>{
           let span = document.createElement('span');
           span.innerHTML = words[i];
-          // line.textContent+=words[i];
+          span.classList = "letter";
           line.append(span);
         }, (interval + i*100));
       }
     }
 
     function secondLineErasing(){
-        let elem = document.getElementById("vacancy");
-        let text = elem.textContent;
-
-        for(let k = 0; k <= text.length; k++){
+        let letterCollection = document.querySelectorAll('.vacancy .letter');
+        for(let k = 0; k <= letterCollection.length; k++){
           setTimeout(()=>{
-              let newtxt = text.slice(0, text.length - k);
-              elem.textContent = newtxt;
-              if(k == text.length){
-                text.textContent = "";
-              }
+              let deletedLetter = letterCollection[letterCollection.length - k];
+              deletedLetter.remove();
           },k*100);
         }
     }

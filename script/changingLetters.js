@@ -8,7 +8,7 @@
     }
 
     function changeLetters(){
-        let spanCollection = document.querySelectorAll("span");
+        let spanCollection = document.querySelectorAll(".letter");
 
         for(let i = 0; i < spanCollection.length; i++){
             let changingLetters = setInterval(() => {
